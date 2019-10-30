@@ -1,0 +1,291 @@
+
+<HTML !doctype>
+
+<html>
+
+<!--*************WDK************************
+Company : WDK GROUPE PARTNER
+Author: Mirko Venturi
+Date: 20/05/2019
+Brand : Jouets SAJOU 
+****************************************-->    
+<head>
+    <title>Jouets SAJOU - Anniversaire</title>
+    <html lang="fr">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />      
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet"> 
+    <!--<link rel="stylesheet" href="fonts/specimen_stylesheet.css" type="text/css" charset="utf-8" />-->
+	<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />    
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="js/appleberry-normal.js"></script>    
+
+    <script src="js/birthday-card.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top">
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="img/sajou-logo.png" id="logo" class="img-fluid" alt="Jouets SAJOU - Anniversaire">
+            </a>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="row" id="lead">
+            <img src="img/jouets-sajou-anniversaire.png" class="img-fluid " alt="Jouets SAJOU - Anniversaire">
+        </div>
+        <div class="row" id="bcard-area">
+            <!-- Formulaire de saisie -->
+            <div class="col-md-5 no-float jumbotron" id="bcard-form">
+                <div class="header">
+                    <h2 class="text-center">Personnalisez votre carton</h2>
+                    <hr>
+                </div>
+                  <div class="form-group">
+                      <label for="age">Age</label>
+                      <input type="text" class="form-control" id="frm-age" autofocus maxlength="6" name="age" placeholder="" required>
+                  </div>
+                <div class="form-group">
+                      <label for="name">Prénom</label>
+                      <input type="text" class="form-control" id="frm-prenom" autofocus maxlength="18" name="prenom" placeholder="" required>
+                </div>
+                <div class="form-group">
+                      <label for="date">Date, heure de début et de fin du RDV</label>
+                      <input type="text" class="form-control" id="frm-date" autofocus maxlength="40" name="date" placeholder="" required>
+                </div>
+                <div class="form-group">  
+                      <label for="note">Petite note</label>
+                <textarea class="form-control" id="frm-note" autofocus maxlength="40" name="note" rows="1"></textarea>
+                </div>
+                  <div class="form-group">
+                      <label for="address">Adresse</label>
+                      <input type="text" class="form-control" id="frm-address" autofocus maxlength="40" name="address" placeholder="" required>
+                </div>
+                  <!--<div class="form-group">
+                      <label for="address2">Complément d'adresse</label>
+                      <input type="text" class="form-control" id="frm-address2" name="address2" placeholder="" required>
+                  </div>-->
+                <div class="form-group">
+                      <label for="city">Code postal et ville</label>
+                      <input type="text" class="form-control" id="frm-city" autofocus maxlength="40" name="city" placeholder="" required>
+                </div>
+                  <div class="form-group">
+                      <label for="phone">Téléphone</label>
+                      <input type="text" class="form-control" id="frm-phone" autofocus maxlength="15" name="phone" placeholder="" required>
+                  </div>
+            </div>
+            <!-- Prévisualisation -->
+            <div class="col-md-6 offset-md-1 no-float jumbotron" id="bcard-preview">
+                <div class="header">
+                    <h2 class="text-center">Votre carton d'invitation</h2>
+                    <hr>
+                </div>
+                <div id="birthday-card" class="text-center">
+                    <img src="img/sajou-anniversaire-top.png" class="img-fluid" alt="Jouets SAJOU - Anniversaire">
+                    <p class="text-orange">Pour ses <span id="disp-age" class="text-orange">6 ans</span></p>
+                    <p class="div-orange"><span id="disp-prenom" class="text-green">Stéphanie</span></p>
+                    <p class="text-aniv">t'invite à son anniversaire</p>
+                    <!--<p class="div-orange"><span id="disp-theme" class="text-yellow">Harry Potter</span></p>-->
+                    <p class="div-orange"><span id="disp-date" class="text-blue">17 juillet à 16h</span></p>
+                    <!--<p class="text-pinkflash">Au :</p>-->
+                    <p class="div-orange"><span id="disp-note" class="text-tomato">Accueil des enfants à 15h45</span></p>
+                    <p class="div-orange"><span id="disp-address" class="text-pinkflash">14 Boulevard Haussmann</span></p>
+                    <img src="img/sajou-anniversaire-dx.png" class="img-fluid float-right top" width="155px" height="200px" alt="Jouets SAJOU - Anniversaire">
+                    <img src="img/sajou-anniversaire-sx.png" class="img-fluid float-left" width="155px" height="200px" alt="Jouets SAJOU - Anniversaire">
+                    <p class="div-orange"><span id="disp-city" class="text-pinkflash">75001, Paris</span></p>
+                    <p class="text-phone">Répondre SVP au :</p>
+                    <p class="div-orange"><span id="disp-phone" class="text-phone">06 40 50 80 90</span></p>    
+                    <img src="img/sajou-logo.png" id="logo" class="img-fluid" width="150px" height="auto" alt="Jouets SAJOU - Anniversaire">
+                </div>
+                &nbsp;
+                &nbsp;
+                <div class="col-sm-12 text-center">
+                    <button class="btn-lg btn btn-submit-affix center-block" id="button" validator="card" onclick="printPageArea()">Je télécharge</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+      <footer class="footer">
+           <p class="text-center" id="copyright">&copy; copyright 2019 - Jouets SAJOU </p>
+    </footer>
+ 
+<script language="javascript" type="text/javascript"> 
+       
+                      function printPageArea() {
+                            
+                            var doc = new jsPDF() 
+                            var background = new Image()
+                                background.src = "img/sajou-anniversaire-top.png"; //1
+                                doc.addImage(background, 'png', 0 ,2, 103, 28);
+                          
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-sx.png"; //1
+                                doc.addImage(background, 'png', 0, 105, 30, 40);
+                                
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-dx.png"; //1
+                                doc.addImage(background, 'png', 70, 105, 30, 40);
+                          
+                            var background = new Image()
+                                background.src = "img/sajou-anniversaire-top.png"; //2
+                                doc.addImage(background, 'png', 105 ,2, 103, 28); 
+                          
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-sx.png"; //2
+                                doc.addImage(background, 'png', 105, 105, 30, 40);
+                                
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-dx.png"; //2
+                                doc.addImage(background, 'png', 175, 105, 30, 40);
+                          
+                            var background = new Image()
+                                background.src = "img/sajou-anniversaire-top.png"; //3
+                                doc.addImage(background, 'png', 0, 150, 103, 28);
+                          
+                                doc.setLineDash ([3.5], 14) //horizontal line
+                                doc.setLineWidth(0.1)
+                                doc.line(0, 149, 260, 149)
+                               // doc.setDrawColor(226, 224, 224)
+                          
+                                doc.setLineWidth([0.1], 14) //vertical line
+                                doc.setLineWidth(0.1)
+                                doc.line(106, 1, 106, 300)
+                              //  doc.setDrawColor(226, 224, 224)
+                          
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-sx.png"; //3
+                                doc.addImage(background, 'png', 0, 253, 30, 40);
+                                
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-dx.png"; //3
+                                doc.addImage(background, 'png', 70, 253, 30, 40);                          
+                          
+                            var background = new Image()
+                                background.src = "img/sajou-anniversaire-top.png"; //4
+                                doc.addImage(background, 'png', 105, 150, 103, 28);
+                          
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-sx.png"; //4
+                                doc.addImage(background, 'png', 105, 253, 30, 40);
+                                
+                            var background = new Image();
+                                background.src = "img/sajou-anniversaire-dx.png"; //4
+                                doc.addImage(background, 'png', 175, 253, 30, 40);
+                                
+                                doc.setFontSize(25)
+                                doc.setTextColor(240, 126, 6);
+                                doc.setFont("Appleberry");
+                                doc.setFontStyle("normal");
+                                doc.text('Pour ses ' + document.getElementsByName('age')[0].value, 26, 42); //1
+                                doc.text('Pour ses ' + document.getElementsByName('age')[0].value, 130, 42); //2
+                                doc.text('Pour ses ' + document.getElementsByName('age')[0].value, 26, 190); //3
+                                doc.text('Pour ses ' + document.getElementsByName('age')[0].value, 130, 190); //4
+
+                                doc.setFontSize(30)
+                                doc.setTextColor(137, 202, 179);
+                                doc.setFont("Appleberry");
+                                doc.setFontStyle("normal");
+                                doc.text(document.getElementsByName('prenom')[0].value, 54, 58, null, null, 'center'); //1
+                                doc.text(document.getElementsByName('prenom')[0].value, 158, 58, null, null, 'center'); //2
+                                doc.text(document.getElementsByName('prenom')[0].value, 54, 206,  null, null, 'center'); //3
+                                doc.text(document.getElementsByName('prenom')[0].value, 158, 206, null, null, 'center'); //4
+
+                                doc.setFontSize(20)
+                                doc.setTextColor(240, 126, 6);
+                                doc.setFont("Appleberry");
+                                doc.text('t\'invite à son anniversaire', 10, 72) //1
+                                doc.text('t\'invite à son anniversaire', 116, 72) //2
+                                doc.text('t\'invite à son anniversaire', 10, 220) //3
+                                doc.text('t\'invite à son anniversaire', 116, 220) //4
+                               /* doc.text(document.getElementsByName('theme')[0].value, 54, 85, null, null, 'center'); //1
+                                doc.text(document.getElementsByName('theme')[0].value, 158, 85, null, null, 'center'); //2
+                                doc.text(document.getElementsByName('theme')[0].value, 54, 230, null, null, 'center'); //3
+                                doc.text(document.getElementsByName('theme')[0].value, 158, 230, null, null, 'center'); //4*/
+
+                               // doc.addFont("Hanley-Script");
+                                doc.setFont("Appleberry")
+                                doc.setFontSize(16)
+                                doc.setTextColor(240, 126, 6);
+                                doc.setFontStyle("normal");
+                                doc.text(document.getElementsByName('date')[0].value, 54, 82, null, null, 'center'); //1
+                                doc.text(document.getElementsByName('date')[0].value, 158, 82, null, null, 'center'); //2
+                                doc.text(document.getElementsByName('date')[0].value, 54, 230, null, null, 'center'); //3
+                                doc.text(document.getElementsByName('date')[0].value, 158, 230, null, null, 'center'); //4
+                          
+                                doc.setFont("Appleberry")
+                                doc.setFontSize(14)
+                                doc.setTextColor(240, 126, 6);
+                                doc.setFontStyle("normal");
+                                doc.text(document.getElementsByName('note')[0].value, 54, 89, null, null, 'center'); //1
+                                doc.text(document.getElementsByName('note')[0].value, 158, 89, null, null, 'center'); //2
+                                doc.text(document.getElementsByName('note')[0].value, 54, 237, null, null, 'center'); //3
+                                doc.text(document.getElementsByName('note')[0].value, 158, 237, null, null, 'center'); //4
+                          
+                                doc.setFontSize(15)
+                                doc.setTextColor(224, 17, 95);
+                                doc.setFont("Appleberry");
+                                doc.setFontStyle("normal");
+                                doc.text(document.getElementsByName('address')[0].value, 54, 99, null, null, 'center'); //1
+                                doc.text(document.getElementsByName('address')[0].value, 158, 99, null, null, 'center'); //2
+                                doc.text(document.getElementsByName('address')[0].value, 54, 247, null, null, 'center'); //3
+                                doc.text(document.getElementsByName('address')[0].value, 158, 247, null, null, 'center'); //4
+                                doc.text(document.getElementsByName('city')[0].value, 54, 105, null, null, 'center'); //1
+                                doc.text(document.getElementsByName('city')[0].value, 158, 105, null, null, 'center'); //2
+                                doc.text(document.getElementsByName('city')[0].value, 54, 253, null, null, 'center'); //3
+                                doc.text(document.getElementsByName('city')[0].value, 158, 253, null, null, 'center'); //4
+                          
+                                doc.setFontSize(14)
+                                doc.setTextColor(240, 126, 6);
+                                doc.setFont("Appleberry");
+                                doc.setFontStyle("normal");
+                                doc.text('Répondre SVP au :', 32, 118) //1
+                                doc.text('Répondre SVP au :', 137, 118) //2
+                                doc.text('Répondre SVP au :', 32, 266) //3
+                                doc.text('Répondre SVP au :', 137, 266) //4
+                                doc.text(document.getElementsByName('phone')[0].value, 36, 125); //1
+                                doc.text(document.getElementsByName('phone')[0].value, 140, 125); //2
+                                doc.text(document.getElementsByName('phone')[0].value, 36, 273); //3
+                                doc.text(document.getElementsByName('phone')[0].value, 140, 273); //4
+                          
+                           var background = new Image();
+                                background.src = "img/sajou-logo.png"; //1
+                                doc.addImage(background, 'png', 33, 132, 40, 14);
+                          
+                           var background = new Image();
+                                background.src = "img/sajou-logo.png"; //2
+                                doc.addImage(background, 'png', 138, 132, 40, 14);
+                           
+                           var background = new Image();
+                                background.src = "img/sajou-logo.png"; //3
+                                doc.addImage(background, 'png', 33, 280, 40, 14); 
+                           
+                           var background = new Image();
+                                background.src = "img/sajou-logo.png"; //4
+                                doc.addImage(background, 'png', 138, 280, 40, 14);
+                          
+                                doc.save('Jouets SAJOU Anniversaire.pdf')
+            
+                    } 
+    
+	</script> 
+
+
+    <script src="js/birthday-card.js"></script>
+    <script>
+        (function() {
+            b_card = Object.create(b_card);
+            b_card.init();
+        })();
+    </script>
+
+
+
+     </body>  
+
+</html>
