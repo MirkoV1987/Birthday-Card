@@ -4,7 +4,9 @@ Birthday card plugin for Jouets SAJOU brand
 Author: Mirko Venturi
 Date: 5/06/2019
 
-=====================SAJOU Birthday Card======================
+=====================Birthday Card======================
+
+IMPORTANT : jsPDF library is need for this plugin -> Download it on https://parall.ax/products/jspdf
 
 1) Create a "birthday-card" project folder into wamp (or Mamp for Mac OS) 
 
