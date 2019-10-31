@@ -1,0 +1,200 @@
+/*************WDK************************
+Company : WDK GROUPE PARTNER
+Author: Mirko Venturi
+Date: 20/05/2019
+Brand : Jouets SAJOU 
+****************************************/
+
+/*@font-face {
+    font-family: 'appleberry';
+    src: url('fonts/appleberry.tff'), 
+    format("ttf")
+}*/
+
+@font-face {
+    font-family: 'Appleberry';
+    src: url('../fonts/appleberry/appleberry.ttf') format('truetype'), url('../fonts/appleberry.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa.tff') format('truetype'), 
+    format("ttf")
+    font-weight: normal;
+    font-style: normal;    
+}
+
+/*@font-face {
+    font-family: 'Hanley-Script';
+    src: url('../fonts/hanley-script-webfont.woff2') format('woff2'),
+         url('../fonts/hanley-script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-bottom: 140px;
+}
+
+nav {
+    background-color: #f07e06;
+}
+
+.jumbotron {
+    border: 1px solid #ccc;
+    background-color: #fff; 
+}
+
+h2 {
+   font-family: 'appleberry';
+   font-size: 2em;     
+   color: #f07e06;
+}
+
+.header hr {
+    width: 100%;
+    border: 1px solid #f07e06;
+}
+
+p {
+    line-height: 140%;
+}
+ 
+
+label {
+    font-family: 'Comfortaa';
+    color: #f07e06;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: #f07e06;
+    color: white;
+}
+
+#lead {
+    margin: auto auto 30px auto;
+}
+
+#birthday-card {
+    min-height: 400px;
+    z-index: -1;
+}
+
+.div-orange {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: #f07e06;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.div-age {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: #f07e06;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.text-orange {
+    color: #f07e06; /*orange*/
+    font-size: 1.5em;
+    /*text-decoration: underline;*/
+}
+
+.text-green {
+    color: #89CAB3;
+    font-size: 1.4em;
+}
+
+.text-tomato {
+    color: #f07e06; /*orange*/
+    font-size: 1em;
+}
+
+.text-blue {
+    color: #f07e06; /*orange*/
+    font-size: 1em;
+}
+
+.text-aniv {
+    text-align: center;
+    font-family: 'Comfortaa' !important;
+    font-size: 1.4em;
+    text-transform: normal;
+    color: #f07e06;
+    font-weight: bold;
+}
+
+.text-phone {
+    text-align: center;
+    font-family: 'Comfortaa' !important;
+    font-size: 1em;
+    text-transform: normal;
+    color: #f07e06;
+    font-weight: bold;
+}
+
+.text-pinkflash {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: #007FFF;
+    font-size: 1em;
+    text-transform: normal;
+}
+
+.text-pinkflash {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: #E0115F;
+    font-size: 1em;
+    text-transform: normal;
+}
+
+.text-phone {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: #ED7F10;
+    font-size: 1.2divem;
+    text-transform: normal;
+}
+
+.img-fluid .float-left {
+    position: absolute;
+    bottom:0;
+    z-index: 2;
+}
+
+.btn {
+    background-color: #f07e06;
+    border: none;
+    color: #fff;
+    text-transform: normal;
+}
+
+.btn:hover {
+    background-color: #87CEEB;
+    border: none;
+    color: #fff;
+    text-transform: normal;
+}
+
+#copyright {
+    margin: 25px auto;
+}
